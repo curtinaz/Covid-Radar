@@ -10,6 +10,11 @@
     color: White;
 }
 
+.fwhite{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 /* Serviços */
 .mar-top{
     margin-top: 2px;
@@ -20,7 +25,7 @@
 
 #barra{
     display: grid;
-    grid-template-columns: 5% 95%;
+    grid-template-columns: 5% 90% 5%;
     grid-template-rows: 100%;
   }
 
@@ -39,7 +44,9 @@
 /* Posicionamento */
 
 #titulo{
-    margin: auto;
+    margin: left;
+    margin-left: 30px;
+    margin-top: 2px;
 }
 
 /* Barras */
@@ -110,7 +117,7 @@
 
 .textocidade{
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
+    font-weight: light;
     font-size: 15px;
 }
 
@@ -120,4 +127,19 @@
     font-style: italic;
     font-size: 15px;
     color: rgb(143, 143, 143);
+}
+
+/* Menu lateral */
+.titulomenu{
+    font-family: Helvetica;
+    font-size: x-large;
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+}
+#lateral{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 100%;
+    
 }
