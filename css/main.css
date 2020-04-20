@@ -1,0 +1,123 @@
+/* Global */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Fontes */
+.ftitulo{
+    font-family: Tahoma;
+    color: White;
+}
+
+/* Serviços */
+.mar-top{
+    margin-top: 2px;
+}
+
+  
+/* Grids  = DESLIGADO = */
+
+#barra{
+    display: grid;
+    grid-template-columns: 5% 95%;
+    grid-template-rows: 100%;
+  }
+
+  
+.gridbotao{
+    grid-column-start: 1;
+    grid-row-start: 0;
+}
+
+.gridtitulo{
+    grid-column-start: 0;
+    grid-row-start: 0;
+
+}
+
+/* Posicionamento */
+
+#titulo{
+    margin: auto;
+}
+
+/* Barras */
+
+.bg-blue{
+    border-style: solid;
+    background-color: rgb(25, 156, 244);
+    border-color: rgb(25, 156, 244);
+    padding: 5px;
+}
+
+.titulo{
+    
+}
+
+
+/* TABELAS DAS CIDADES */
+
+.gridtable{
+    display: grid;
+    grid-template-columns: 95% 5%;
+    grid-template-rows: 100%;
+    
+}
+.direita{
+    text-align: right;
+}
+
+.bordatop{
+    border-style: solid;
+    border-color: rgb(187, 187, 187);
+    border-radius: 7px 7px 0px 0px;
+    -moz-border-radius: 7px 7px 0px 0px;
+    -webkit-border-radius: 7px 7px 0px 0px;
+    border-width: 1px;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 15px;
+}
+.bordamid{
+    border-style: solid;
+    border-color: rgb(187, 187, 187);
+    border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
+    border-width: 1px;
+    border-top-width: 0px;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 15px;
+}
+.bordabot{
+    border-style: solid;
+    border-color: rgb(187, 187, 187);
+    border-radius: 0px 0px 7px 7px;
+    -moz-border-radius: 0px 0px 7px 7px;
+    -webkit-border-radius: 0px 0px 7px 7px;
+    border-width: 1px;
+    border-top-width: 0px;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 15px;
+}
+
+.bordadetalhes{
+
+}
+
+.textocidade{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.textobot{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 15px;
+    color: rgb(143, 143, 143);
+}

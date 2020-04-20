@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CovidRadar</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/liga.css">
+    <link rel="stylesheet" href="./css/hamb/hamburgers.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('section#content article div.btn').click(function(){
+                $(this).siblings('p.box').slideToggle();
+                if($(this).text() == "Gravataí"){
+                    $(this).text("Cachoeirinha");
+                }else{
+                    $(this).text("Gravataí");
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <header>
+        
+        <section id="barra" class="bg-blue">
+            <div class="botão gridbotao">
+            <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner">
+                    </span>
+                </span>
+            </button>
+            </div>
+
+            <div id="titulo" class="titulo">
+            <h2 class="ftitulo gridtitulo">Covid Radar</h2>
+            </div>  
+        </section>
+    </header>
+
+    <br>
+
+    <section id="cachoeirinha">
+        <article>
+            <div class="bordatop gridtable">
+                <h1 style="font-weight: bold;" class="textocidade">Situação atual em Cachoeirinha</h1>
+            </div>
+            <div class="bordamid gridtable">
+                <h1 class="textocidade">Suspeitos</h1>
+                <h1 style="color: rgb(255, 166, 0); text-align: right;" class="textocidade">2</h1>
+            </div>
+            <div class="bordamid gridtable">
+                <h1 class="textocidade">Confirmados</h1>
+                <h1 style="color: rgb(255, 0, 0); text-align: right;" class="textocidade">9</h1>
+            </div>
+            <div class="bordamid gridtable">
+                <h1 class="textocidade">Descartados</h1>
+                <h1 style="color: rgb(0, 212, 0); text-align: right;" class="textocidade">92</h1>
+            </div>
+            <div class="bordamid gridtable">
+                <h1 class="textocidade">Óbitos</h1>
+                <h1 style="color: rgb(0, 0, 0); text-align: right;"class="textocidade">0</h1>
+            </div>
+            <div class="bordabot direita">
+                <h1 style="align-content: right;" class="textobot">Atualizado em 19/04/2020 às 17:01h</h1>
+            </div>
+        </article>
+
+        </div>
+    </section>
+
+    <br>
+
+    <section id="gravatai">
+        <article>
+            <div class="bordatop gridtable">
+                <h1 style="font-weight: bold;" class="textocidade">Situação atual em Gravataí</h1>
+            </div>
+            <div class="bordamid gridtable">
+                <h1 class="textocidade">Suspeitos</h1>
+                <h1 style="color: rgb(255, 166, 0); text-align: right;" class="textocidade">12</h1>
+            </div>
+            <div class="bordamid gridtable">
+                <h1 class="textocidade">Confirmados</h1>
+                <h1 style="color: rgb(255, 0, 0); text-align: right;" class="textocidade">15</h1>
+            </div>
+            <div class="bordamid gridtable">
+                <h1 class="textocidade">Descartados</h1>
+                <h1 style="color: rgb(0, 212, 0); text-align: right;" class="textocidade">134</h1>
+            </div>
+            <div class="bordamid gridtable">
+                <h1 class="textocidade">Óbitos</h1>
+                <h1 style="color: rgb(0, 0, 0); text-align: right;"class="textocidade">0</h1>
+            </div>
+            <div class="bordabot direita">
+                <h1 style="align-content: right;" class="textobot">Atualizado em 19/04/2020 às 17:01h</h1>
+            </div>
+        </article>
+
+        </div>
+    </section>
+
+<br>
+
+    
+    
+  <script>
+    /**
+     * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
+     *
+     * @private
+     * @author Todd Motto
+     * @link https://github.com/toddmotto/foreach
+     * @param {Array|Object|NodeList} collection - Collection of items to iterate, could be an Array, Object or NodeList
+     * @callback requestCallback      callback   - Callback function for each iteration.
+     * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
+     * @returns {}
+     */
+      var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+  
+      var hamburgers = document.querySelectorAll(".hamburger");
+      if (hamburgers.length > 0) {
+        forEach(hamburgers, function(hamburger) {
+          hamburger.addEventListener("click", function() {
+            this.classList.toggle("is-active");
+          }, false);
+        });
+      }
+    </script>
+</body>
+</html>
