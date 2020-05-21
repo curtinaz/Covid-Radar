@@ -9,18 +9,6 @@
     <link rel="stylesheet" href="./css/hamb/hamburgers.css">
     <link rel="stylesheet" href="./css/menu.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $(function(){
-            $('section#content article div.btn').click(function(){
-                $(this).siblings('p.box').slideToggle();
-                if($(this).text() == "Gravataí"){
-                    $(this).text("Cachoeirinha");
-                }else{
-                    $(this).text("Gravataí");
-                }
-            });
-        });
-    </script>
 
 </head>
 <body>
@@ -52,24 +40,24 @@
             <div class="bordatop gridtable">
                 <h1 style="font-weight: bold;" class="textocidade">Situação atual em Cachoeirinha</h1>
             </div>
-            <div class="bordamid gridtable">
+            <!-- div class="bordamid gridtable">
                 <h1 class="textocidade">Suspeitos</h1>
                 <h1 style="color: rgb(255, 166, 0); text-align: right;" class="textocidade">2</h1>
-            </div>
+            </div-->
             <div class="bordamid gridtable">
                 <h1 class="textocidade">Confirmados</h1>
-                <h1 style="color: rgb(255, 0, 0); text-align: right;" class="textocidade">9</h1>
+                <h1 style="color: rgb(255, 0, 0); text-align: right;" class="textocidade cachconfirmed">*</h1>
             </div>
-            <div class="bordamid gridtable">
+            <!-- div class="bordamid gridtable">
                 <h1 class="textocidade">Descartados</h1>
                 <h1 style="color: rgb(0, 212, 0); text-align: right;" class="textocidade">92</h1>
-            </div>
+            </div-->
             <div class="bordamid gridtable">
                 <h1 class="textocidade">Óbitos</h1>
-                <h1 style="color: rgb(0, 0, 0); text-align: right;"class="textocidade">0</h1>
+                <h1 style="color: rgb(0, 0, 0); text-align: right;"class="textocidade cachdeaths">*</h1>
             </div>
             <div class="bordabot direita">
-                <h1 style="align-content: right;" class="textobot">Atualizado em 19/04/2020 às 17:01h</h1>
+                <h1 style="align-content: right;" class="textobot">Conteudo atualizado às: 6:30h</h1>
             </div>
         </article>
 
@@ -83,24 +71,24 @@
             <div class="bordatop gridtable">
                 <h1 style="font-weight: bold;" class="textocidade">Situação atual em Gravataí</h1>
             </div>
-            <div class="bordamid gridtable">
+            <!-- div class="bordamid gridtable">
                 <h1 class="textocidade">Suspeitos</h1>
                 <h1 style="color: rgb(255, 166, 0); text-align: right;" class="textocidade">12</h1>
-            </div>
+            </div-->
             <div class="bordamid gridtable">
                 <h1 class="textocidade">Confirmados</h1>
-                <h1 style="color: rgb(255, 0, 0); text-align: right;" class="textocidade">15</h1>
+                <h1 style="color: rgb(255, 0, 0); text-align: right;" class="textocidade gravconfirmed">15</h1>
             </div>
-            <div class="bordamid gridtable">
+            <!-- div class="bordamid gridtable">
                 <h1 class="textocidade">Descartados</h1>
                 <h1 style="color: rgb(0, 212, 0); text-align: right;" class="textocidade">134</h1>
-            </div>
+            </div -->
             <div class="bordamid gridtable">
                 <h1 class="textocidade">Óbitos</h1>
-                <h1 style="color: rgb(0, 0, 0); text-align: right;"class="textocidade">0</h1>
+                <h1 style="color: rgb(0, 0, 0); text-align: right;"class="textocidade gravdeaths">*</h1>
             </div>
             <div class="bordabot direita">
-                <h1 style="align-content: right;" class="textobot">Atualizado em 19/04/2020 às 17:01h</h1>
+                <h1 style="align-content: right;" class="textobot">Conteudo atualizado às: 6:30h<h1 class="gravatt"></h1></h1>
             </div>
         </article>
 
@@ -133,6 +121,26 @@
           }, false);
         });
       }
+    </script>
+        <script>
+    $.getJSON('https://brasil.io/api/dataset/covid19/caso/data/?city_ibge_code=4303103&format=json', function(cachoeirinha) {
+        
+        var confirmed = `${cachoeirinha.results[0].confirmed}`
+        var deaths = `${cachoeirinha.results[0].deaths}`
+                    
+        $(".cachconfirmed").html(confirmed);
+        $(".cachdeaths").html(deaths);
+    });
+
+    $.getJSON('https://brasil.io/api/dataset/covid19/caso/data/?city_ibge_code=4309209&format=json', function(gravatai) {
+        
+        var confirmed = `${gravatai.results[0].confirmed}`
+        var deaths = `${gravatai.results[0].deaths}`
+                    
+        $(".gravconfirmed").html(confirmed);
+        $(".gravdeaths").html(deaths);
+        $(".gravdeaths").html(deaths);
+    });
     </script>
 </body>
 </html>
